@@ -25,3 +25,13 @@ The script creates  a `MySQL/MariaDB` *database* with the **same name** as the `
 
 The users have full access to their database.
 
+## Setting quota limits for some users
+
+Create a simple **text file** called `users_quota.txt` and place in it a user name  on each line.
+
+Then run
+
+```sh
+./set_users_quota.sh
+```
+
