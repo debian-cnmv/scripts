@@ -17,8 +17,7 @@ create_sql()
 }
 
 
-if [ $# -gt 1 ];
-then
+if [ $# -gt 1 ]; then
 	echo "Usage: script-name [users-file]"
 	echo "users-file must contain lines like user:password"
 	echo "./users.txt is used if no file is specified"
@@ -30,11 +29,8 @@ else
 	fi
 fi
 
-if [ -f "$FILE" ];
-then
-
+if [ -f "$FILE" ]; then
 	create_sql > script.sql
-
 	if [ $? -eq 0 ];
 	then
 		mysql -u root -p < script.sql

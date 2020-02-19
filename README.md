@@ -27,11 +27,13 @@ The users have full access to their database.
 
 ## Setting quota limits for some users
 
-Create a simple **text file** called `users_quota.txt` and place in it a user name  on each line.
+Create a simple **text file** and place in it a user name on each line.
 
 Then run
 
 ```sh
-./set_users_quota.sh
+./set_users_quota.sh path/to/file
 ```
+
+If you don't specify a file the user names are taken, line by line, from `stdin`.
 
