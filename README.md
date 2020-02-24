@@ -37,3 +37,13 @@ Then run
 
 If you don't specify a file the user names are taken, line by line, from `stdin`.
 
+## Create user dirs for public html
+
+Create a simple **text file** and place in it a user name on each line.
+
+Then run
+
+```sh
+./create_user_dirs.sh < users-file
+```
+
