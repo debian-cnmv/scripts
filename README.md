@@ -27,15 +27,20 @@ The users have full access to their database.
 
 ## Setting quota limits for some users
 
-Create a simple **text file** and place in it a user name on each line.
+Create a simple **text file** and place there, on each line, the user name and the min and max 
+quota limits like this:
 
-Then run
-
-```sh
-./set_users_quota.sh path/to/file
+```
+joe 100M 150M
+alice 200M 250M
+bob 300M 400M
 ```
 
-If you don't specify a file the user names are taken, line by line, from `stdin`.
+Then run:
+
+```sh
+./set_users_quota.sh < path/to/text-file
+```
 
 ## Create user dirs for public html
 
@@ -44,6 +49,6 @@ Create a simple **text file** and place in it a user name on each line.
 Then run
 
 ```sh
-./create_user_dirs.sh < users-file
+./create_user_dirs.sh < path/to/users-file
 ```
 
