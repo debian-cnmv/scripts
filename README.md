@@ -3,12 +3,15 @@
 ## Creating users for `MySQL/MariaDB`
 
 Create a simple **text file** and place on each line pairs like `user:user-password` and run
+as `root`:
 
 
 ```sh
 ./create_sql_users.sh <  path/to/file
 
 ```
+
+The root pass of `MySQL` will be required!
 
 The script creates  a `MySQL/MariaDB` *database* with the **same name** as the `user`.
 
